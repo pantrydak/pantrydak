@@ -4,15 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#004C3F">
-  <title>PantryDak Groceries | Indian Groceries Delivered in Liverpool</title>
-  <meta name="description" content="PantryDak Groceries delivers authentic Indian groceries and daily essentials across Liverpool. Order on WhatsApp by Friday 8 PM for weekend doorstep delivery.">
+  <title>PantryDak Groceries | Launching Soon — Indian Groceries Delivered in Liverpool</title>
+  <meta name="description" content="PantryDak Groceries is launching soon — authentic Indian groceries and daily essentials delivered to your Liverpool doorstep every weekend. Join the waitlist on WhatsApp.">
   <link rel="canonical" href="https://pantrydak.co.uk/">
 
   <!-- Social sharing (WhatsApp, Facebook, X) -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="PantryDak Groceries">
-  <meta property="og:title" content="PantryDak Groceries | Indian Groceries Delivered in Liverpool">
-  <meta property="og:description" content="Rice, atta, dal, spices, fresh essentials and snacks — order on WhatsApp by Friday 8 PM for weekend doorstep delivery.">
+  <meta property="og:title" content="PantryDak Groceries | Launching Soon in Liverpool">
+  <meta property="og:description" content="Rice, atta, dal, spices, fresh essentials and snacks — delivered to your door every weekend. Launching soon: join the waitlist on WhatsApp.">
   <meta property="og:url" content="https://pantrydak.co.uk/">
   <meta property="og:image" content="https://pantrydak.co.uk/assets/img/og-image.jpg">
   <meta property="og:image:width" content="1200">
@@ -235,24 +235,30 @@
     .eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      background: var(--paper);
-      border: 1px solid var(--line);
-      color: var(--brand);
-      font-weight: 700;
-      font-size: 0.8rem;
-      padding: 6px 12px 6px 8px;
+      gap: 12px;
+      background: var(--brand);
+      color: #fff;
+      font-weight: 800;
+      font-size: clamp(0.95rem, 2.6vw, 1.15rem);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 10px 20px 10px 16px;
       border-radius: 999px;
-      box-shadow: var(--shadow-sm);
-      margin-bottom: 18px;
+      box-shadow: 0 10px 24px rgba(0, 76, 63, 0.22);
+      margin-bottom: 22px;
     }
+    .eyebrow .soon { color: var(--accent); }
     .eyebrow .dot {
-      width: 8px;
-      height: 8px;
+      width: 12px;
+      height: 12px;
       border-radius: 50%;
-      background: #16A34A;
-      box-shadow: 0 0 0 4px rgba(22, 163, 74, 0.18);
-      margin-left: 4px;
+      background: var(--accent);
+      flex-shrink: 0;
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(245, 166, 35, 0.7); }
+      50% { box-shadow: 0 0 0 8px rgba(245, 166, 35, 0); }
     }
     .hero h1 {
       font-family: var(--serif);
@@ -531,6 +537,16 @@
       color: var(--muted);
       margin-top: 4px;
     }
+    .soon-tag {
+      background: var(--accent-soft);
+      color: var(--cta);
+      border-radius: 999px;
+      padding: 5px 12px;
+      font-weight: 800;
+      font-size: 0.78rem;
+      white-space: nowrap;
+    }
+    .zone-card.is-soon .postcodes li { color: var(--muted); }
     .zone-card p { font-size: 0.92rem; }
     .postcodes {
       display: flex;
@@ -587,6 +603,9 @@
       transform: rotate(45deg);
     }
     .faq-list details > div { padding: 0 20px 18px; color: var(--muted); }
+
+    /* Policies */
+    .policy-card p + p { margin-top: 10px; }
 
     /* CTA band */
     .cta-band {
@@ -677,6 +696,7 @@
 
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
+      .eyebrow .dot { animation: none; }
       *, *::before, *::after { transition: none !important; }
     }
   </style>
@@ -700,10 +720,11 @@
         <a href="#range">Our range</a>
         <a href="#delivery">Delivery</a>
         <a href="#faq">FAQ</a>
+        <a href="#policies">Policies</a>
       </nav>
       <a class="btn btn-light header-cta js-wa" href="https://wa.me/447768651941">
         <svg aria-hidden="true"><use href="#i-wa"/></svg>
-        <span class="label-long">Order on WhatsApp</span><span class="label-short">Order</span>
+        <span class="label-long">Join the waitlist</span><span class="label-short">Waitlist</span>
       </a>
     </div>
   </header>
@@ -713,19 +734,19 @@
     <section class="hero" id="top">
       <div class="wrap hero-grid">
         <div>
-          <span class="eyebrow"><span class="dot" aria-hidden="true"></span>Now delivering · Liverpool pilot</span>
+          <span class="eyebrow"><span class="dot" aria-hidden="true"></span><span><span class="soon">Launching soon</span> · Liverpool</span></span>
           <h1>Authentic Indian groceries, <em>delivered</em> across Liverpool.</h1>
-          <p class="lede">Rice, atta, dal, spices, fresh essentials and snacks — straight to your doorstep every weekend. Just send your list on WhatsApp.</p>
+          <p class="lede">Rice, atta, dal, spices, fresh essentials and snacks — straight to your doorstep every weekend. Join the waitlist on WhatsApp and be first to order when we open.</p>
           <div class="hero-actions" id="hero-cta">
             <a class="btn btn-cta js-wa" href="https://wa.me/447768651941">
               <svg aria-hidden="true"><use href="#i-wa"/></svg>
-              Start your order on WhatsApp
+              Join the waitlist on WhatsApp
             </a>
             <a class="btn btn-ghost" href="#delivery">Check my postcode</a>
           </div>
           <p class="next-slot">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-            <span id="next-slot-text">Order by <strong>Friday 8 PM</strong> for this weekend's delivery.</span>
+            <span>We'll message you <strong>the moment orders open</strong>.</span>
           </p>
 
           <ul class="facts" aria-label="Key order information">
@@ -739,7 +760,7 @@
             </li>
             <li>
               <span class="fact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.4-7-10a7 7 0 1 1 14 0c0 5.6-7 10-7 10Z"/><circle cx="12" cy="11" r="2.5"/></svg></span>
-              <span><small>Coverage</small><strong>22 Liverpool postcodes</strong></span>
+              <span><small>Pilot area</small><strong>10 central Liverpool postcodes</strong></span>
             </li>
           </ul>
         </div>
@@ -763,7 +784,7 @@
         <div class="section-head center">
           <p class="kicker">Simple process</p>
           <h2 class="section-title" id="how-title">How it works</h2>
-          <p class="section-sub">Three steps from pantry list to weekend delivery — built around a weekly batch so produce stays fresh.</p>
+          <p class="section-sub">Once we launch: three steps from pantry list to weekend delivery — built around a weekly batch so produce stays fresh.</p>
         </div>
         <div class="grid grid-3 steps">
           <article class="card step">
@@ -817,13 +838,13 @@
           </article>
           <article class="card range-card">
             <div class="range-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M3.3 7l17.4 10M3.3 17l17.4-10"/><path d="M9.5 3.5 12 6l2.5-2.5M9.5 20.5 12 18l2.5 2.5"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="9" cy="9" r="1"/><circle cx="15" cy="10" r="1"/><circle cx="10" cy="15" r="1"/><circle cx="15.5" cy="15" r="1"/></svg>
             </div>
-            <h3>Snacks, Sweets &amp; Frozen Favourites</h3>
-            <p>Namkeen, mithai and freezer staples for the weekend table.</p>
+            <h3>Snacks &amp; Namkeen</h3>
+            <p>Namkeen, biscuits and tea-time snacks for the weekend table.</p>
           </article>
         </div>
-        <p class="range-note">Looking for something specific? <a class="js-wa" href="https://wa.me/447768651941">Ask us on WhatsApp</a> for this week's full list.</p>
+        <p class="range-note">Looking for something specific? <a class="js-wa" href="https://wa.me/447768651941">Tell us on WhatsApp</a> — it helps us stock the right things for launch.</p>
       </div>
     </section>
 
@@ -832,13 +853,13 @@
       <div class="wrap">
         <div class="section-head">
           <p class="kicker">No surprises</p>
-          <h2 class="section-title" id="zones-title">Delivery zones &amp; fees</h2>
-          <p class="section-sub">Clear two-tier pricing for the Liverpool pilot. Check your postcode before you send your basket.</p>
+          <h2 class="section-title" id="zones-title">Delivery area &amp; fees</h2>
+          <p class="section-sub">We're starting small for the Liverpool pilot, with more areas coming soon. Check your postcode below.</p>
         </div>
 
         <ul class="rules" aria-label="Order rules">
           <li>Minimum order <strong>£20</strong></li>
-          <li>Free delivery over <strong>£35</strong></li>
+          <li>Free delivery over <strong>£50</strong></li>
           <li>Order by <strong>Fri 8 PM</strong></li>
           <li>Delivered <strong>Sat &amp; Sun</strong></li>
         </ul>
@@ -865,23 +886,23 @@
 
             <article class="card zone-card" id="zone-standard">
               <div class="zone-head">
-                <h3>Standard Zone<small>Core Liverpool</small></h3>
+                <h3>Pilot Zone<small>Core Liverpool</small></h3>
                 <div class="price">£2.99<small>per delivery</small></div>
               </div>
-              <p>Free delivery on orders over £35.</p>
-              <ul class="postcodes" aria-label="Standard zone postcodes">
+              <p>Free delivery on orders over £50.</p>
+              <ul class="postcodes" aria-label="Pilot zone postcodes">
                 <li>L1</li><li>L2</li><li>L3</li><li>L4</li><li>L5</li>
                 <li>L6</li><li>L7</li><li>L8</li><li>L13</li><li>L15</li>
               </ul>
             </article>
 
-            <article class="card zone-card" id="zone-extended">
+            <article class="card zone-card is-soon" id="zone-extended">
               <div class="zone-head">
-                <h3>Extended Zone<small>More than 5 km from the city centre</small></h3>
-                <div class="price">£4.99<small>£2.99 + £2.00 distance fee</small></div>
+                <h3>Wider Liverpool<small>More than 5 km from the city centre</small></h3>
+                <span class="soon-tag">Coming soon</span>
               </div>
-              <p>Standard rate plus a £2.00 distance fee. Over £35, the standard rate is free — you just pay the £2.00 distance fee.</p>
-              <ul class="postcodes" aria-label="Extended zone postcodes">
+              <p>We'll add these areas after the pilot. <a class="js-wa-area" href="https://wa.me/447768651941">Join the waitlist</a> and we'll let you know when we reach you.</p>
+              <ul class="postcodes" aria-label="Coming soon postcodes">
                 <li>L9</li><li>L10</li><li>L11</li><li>L12</li><li>L14</li>
                 <li>L16</li><li>L17</li><li>L18</li><li>L19</li><li>L20</li>
                 <li>L25</li><li>L28</li>
@@ -902,8 +923,12 @@
         </div>
         <div class="faq-list">
           <details>
-            <summary>How do I place an order?</summary>
-            <div>Send your shopping list to us on WhatsApp at <strong>+44 7768 651941</strong> before Friday 8 PM. We'll confirm availability and your total.</div>
+            <summary>When do you launch?</summary>
+            <div>Very soon. Join the waitlist by messaging us on WhatsApp at <strong>+44 7768 651941</strong> and we'll let you know as soon as orders open.</div>
+          </details>
+          <details>
+            <summary>How will I place an order?</summary>
+            <div>Once we're open, send your shopping list to us on WhatsApp before Friday 8 PM. We'll confirm availability and your total.</div>
           </details>
           <details>
             <summary>How do I pay?</summary>
@@ -911,7 +936,7 @@
           </details>
           <details>
             <summary>Is there a minimum order?</summary>
-            <div>The minimum order for weekend delivery is £20. Orders over £35 get free standard delivery (Extended Zone orders still pay the £2.00 distance fee).</div>
+            <div>The minimum order for weekend delivery is £20. Delivery is £2.99, and free on orders over £50.</div>
           </details>
           <details>
             <summary>When do I receive my delivery?</summary>
@@ -919,8 +944,40 @@
           </details>
           <details>
             <summary>Which areas do you cover?</summary>
-            <div>Standard Zone: L1–L8, L13 and L15. Extended Zone: L9–L12, L14, L16–L20, L25 and L28. Use the <a href="#delivery">postcode checker</a> to confirm.</div>
+            <div>During the pilot we deliver to L1–L8, L13 and L15. L9–L12, L14, L16–L20, L25 and L28 are coming soon. Use the <a href="#delivery">postcode checker</a> to confirm.</div>
           </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Policies -->
+    <section class="band-white" id="policies" aria-labelledby="policies-title">
+      <div class="wrap">
+        <div class="section-head center">
+          <p class="kicker">The small print, kept short</p>
+          <h2 class="section-title" id="policies-title">Our policies</h2>
+          <p class="section-sub">How we handle refunds, substitutions, deliveries and your details.</p>
+        </div>
+        <div class="grid grid-2">
+          <article class="card policy-card">
+            <h3>Refunds &amp; cancellations</h3>
+            <p>If an item is missing, damaged or wrong, tell us on WhatsApp within 24 hours of delivery — a photo helps. We'll refund it or replace it in your next delivery, whichever you prefer.</p>
+            <p>You can change or cancel your order for free until the Friday 8 PM cutoff. Refunds go back to your original payment method within 5 working days.</p>
+          </article>
+          <article class="card policy-card">
+            <h3>Out-of-stock items</h3>
+            <p>If something on your list isn't available, we'll tell you when we confirm your order and suggest an alternative. We never substitute without asking, and you only pay for what we deliver.</p>
+          </article>
+          <article class="card policy-card">
+            <h3>Missed deliveries</h3>
+            <p>We'll message you with your delivery window and again when we're on our way. If you're not home, we'll call and wait up to 10 minutes.</p>
+            <p>If we still can't hand it over, we'll leave it in a safe place only if you've agreed one, or rebook it for the next delivery day. A second delivery fee may apply.</p>
+          </article>
+          <article class="card policy-card">
+            <h3>Privacy</h3>
+            <p>We only collect what we need to deliver your order: your name, address, phone number and order details. We use them to process your orders and message you about them, and we never sell or share them, except with our payment provider to take payment.</p>
+            <p>Joining the waitlist means we'll message you about our launch only. Ask us on WhatsApp at any time to see or delete your details.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -928,11 +985,11 @@
     <!-- CTA band -->
     <section class="cta-band" aria-labelledby="cta-title">
       <div class="wrap">
-        <h2 id="cta-title">Ready for this weekend's shop?</h2>
-        <p>Send us your list on WhatsApp — we'll handle the rest and deliver to your door.</p>
+        <h2 id="cta-title">Be first in line when we launch</h2>
+        <p>Join the waitlist on WhatsApp — we'll message you as soon as orders open.</p>
         <a class="btn btn-cta js-wa" href="https://wa.me/447768651941">
           <svg aria-hidden="true"><use href="#i-wa"/></svg>
-          Message us on WhatsApp
+          Join the waitlist on WhatsApp
         </a>
       </div>
     </section>
@@ -942,46 +999,33 @@
     <div class="wrap footer-inner">
       <p>© <span id="year">2026</span> PantryDak Groceries · Liverpool, UK</p>
       <p class="footer-links">
+        <a href="#policies">Policies</a>
         <a href="mailto:orders@pantrydak.co.uk">orders@pantrydak.co.uk</a>
         <a class="js-wa" href="https://wa.me/447768651941">WhatsApp +44 7768 651941</a>
       </p>
     </div>
   </footer>
 
-  <a class="fab js-wa" id="fab" href="https://wa.me/447768651941" aria-label="Order on WhatsApp">
+  <a class="fab js-wa" id="fab" href="https://wa.me/447768651941" aria-label="Join the waitlist on WhatsApp">
     <svg aria-hidden="true"><use href="#i-wa"/></svg>
   </a>
 
   <script>
     (function () {
       var WA_NUMBER = "447768651941";
-      var WA_TEXT = "Hi PantryDak! I would like to place an order for this weekend.";
+      var WA_TEXT = "Hi PantryDak! Please add me to the waitlist. My postcode is: ";
 
       function waLink(text) {
         return "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(text || WA_TEXT);
       }
       document.querySelectorAll(".js-wa").forEach(function (a) { a.href = waLink(); });
+      document.querySelectorAll(".js-wa-area").forEach(function (a) {
+        a.href = waLink("Hi PantryDak! Please let me know when you deliver to my area. My postcode is: ");
+      });
 
       document.getElementById("year").textContent = new Date().getFullYear();
 
-      // Next order cutoff (Friday 8 PM) and delivery weekend
-      try {
-        var now = new Date();
-        var cutoff = new Date(now);
-        cutoff.setDate(now.getDate() + ((5 - now.getDay() + 7) % 7));
-        cutoff.setHours(20, 0, 0, 0);
-        if (cutoff <= now) cutoff.setDate(cutoff.getDate() + 7);
-        var sat = new Date(cutoff); sat.setDate(cutoff.getDate() + 1);
-        var sun = new Date(cutoff); sun.setDate(cutoff.getDate() + 2);
-        var fmt = function (d, opts) { return d.toLocaleDateString("en-GB", opts); };
-        var dayMonth = { day: "numeric", month: "short" };
-        document.getElementById("next-slot-text").innerHTML =
-          "Order by <strong>" + fmt(cutoff, { weekday: "short", day: "numeric", month: "short" }) +
-          ", 8 PM</strong> for delivery <strong>Sat " + fmt(sat, { day: "numeric" }) +
-          " – Sun " + fmt(sun, dayMonth) + "</strong>.";
-      } catch (e) { /* keep static fallback text */ }
-
-      // Postcode checker
+      // Postcode checker: pilot zone delivers now; extended zone is coming soon
       var STANDARD = [1, 2, 3, 4, 5, 6, 7, 8, 13, 15];
       var EXTENDED = [9, 10, 11, 12, 14, 16, 17, 18, 19, 20, 25, 28];
       var form = document.getElementById("pc-form");
@@ -1006,10 +1050,12 @@
         var district = m ? parseInt(m[1], 10) : null;
 
         if (district !== null && STANDARD.indexOf(district) !== -1) {
-          result.innerHTML = "✅ Great news — <strong>" + outward + "</strong> is in our Standard Zone. Delivery is £2.99, free over £35.";
+          result.innerHTML = "✅ Great news — <strong>" + outward + "</strong> is in our pilot area. Delivery will be £2.99, free over £50. " +
+            '<a href="' + waLink("Hi PantryDak! Please add me to the waitlist. My postcode is: " + outward) + '">Join the waitlist</a>.';
           zones.standard.classList.add("is-match");
         } else if (district !== null && EXTENDED.indexOf(district) !== -1) {
-          result.innerHTML = "✅ We deliver to <strong>" + outward + "</strong> — it's in our Extended Zone. Delivery is £4.99, or just £2.00 on orders over £35.";
+          result.innerHTML = "📍 <strong>" + outward + "</strong> is coming soon — it's next on our list after the pilot. " +
+            '<a href="' + waLink("Hi PantryDak! Please let me know when you deliver to " + outward + ".") + '">Join the waitlist</a> and we\'ll tell you when we reach you.';
           zones.extended.classList.add("is-match");
         } else {
           var safe = outward.replace(/[^A-Z0-9]/g, "");
