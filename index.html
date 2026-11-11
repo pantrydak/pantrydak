@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#004C3F">
+  <title>PantryDak Groceries | Indian Groceries Delivered in Liverpool</title>
+  <meta name="description" content="PantryDak Groceries delivers authentic Indian groceries and daily essentials across Liverpool. Order on WhatsApp by Friday 8 PM for weekend doorstep delivery.">
+  <link rel="canonical" href="https://pantrydak.co.uk/">
+
+  <!-- Social sharing (WhatsApp, Facebook, X) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="PantryDak Groceries">
+  <meta property="og:title" content="PantryDak Groceries | Indian Groceries Delivered in Liverpool">
+  <meta property="og:description" content="Rice, atta, dal, spices, fresh essentials and snacks — order on WhatsApp by Friday 8 PM for weekend doorstep delivery.">
+  <meta property="og:url" content="https://pantrydak.co.uk/">
+  <meta property="og:image" content="https://pantrydak.co.uk/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/img/favicon-48.png" type="image/png" sizes="48x48">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/img/hero-spices.webp" type="image/webp">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "GroceryStore",
+    "name": "PantryDak Groceries",
+    "url": "https://pantrydak.co.uk/",
+    "logo": "https://pantrydak.co.uk/assets/logo.jpg",
+    "image": "https://pantrydak.co.uk/assets/img/og-image.jpg",
+    "description": "Authentic Indian groceries and daily essentials delivered across Liverpool every weekend.",
+    "telephone": "+447501265010",
+    "email": "orders@pantrydak.co.uk",
+    "address": { "@type": "PostalAddress", "addressLocality": "Liverpool", "addressCountry": "GB" },
+    "areaServed": { "@type": "City", "name": "Liverpool" },
+    "paymentAccepted": "Bank transfer, Card",
+    "currenciesAccepted": "GBP"
+  }
+  </script>
+
+  <style>
+    :root {
+      --brand: #004C3F;
+      --brand-dark: #00352C;
+      --brand-soft: #E3F1EC;
+      --accent: #F5A623;
+      --accent-soft: #FFF3DF;
+      --cta: #B45309;
+      --cta-hover: #92400E;
+      --cream: #FBF7F0;
+      --paper: #FFFFFF;
+      --text: #1C2B27;
+      --muted: #4B5A56;
+      --line: #EAE3D6;
+      --radius: 20px;
+      --radius-sm: 14px;
+      --shadow-sm: 0 2px 6px rgba(0, 53, 44, 0.06);
+      --shadow: 0 14px 40px rgba(0, 53, 44, 0.10);
+      --max: 1160px;
+      --header-h: 68px;
+      --serif: "Fraunces", Georgia, "Times New Roman", serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 12px); }
+    body {
+      margin: 0;
+      font-family: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+      color: var(--text);
+      background: var(--cream);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    img, svg { display: block; max-width: 100%; }
+    img { height: auto; }
+    a { color: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    h1, h2, h3 { text-wrap: balance; }
+
+    :focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 3px;
+      border-radius: 6px;
+    }
+
+    .skip {
+      position: absolute;
+      left: 12px;
+      top: -48px;
+      z-index: 1000;
+      background: var(--paper);
+      color: var(--brand);
+      font-weight: 700;
+      padding: 8px 14px;
+      border-radius: 8px;
+    }
+    .skip:focus { top: 12px; }
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+    }
+
+    .wrap {
+      width: min(var(--max), calc(100% - 32px));
+      margin-inline: auto;
+    }
+
+    /* ---------- Buttons ---------- */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 48px;
+      padding: 12px 20px;
+      border-radius: 999px;
+      font: inherit;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      border: 0;
+      cursor: pointer;
+      transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease, color 0.15s ease;
+    }
+    .btn svg { width: 20px; height: 20px; flex-shrink: 0; }
+    .btn:hover { transform: translateY(-1px); }
+    .btn:active { transform: translateY(1px); }
+    .btn-cta {
+      background: var(--cta);
+      color: #fff;
+      box-shadow: 0 10px 24px rgba(180, 83, 9, 0.28);
+      min-height: 54px;
+      padding: 14px 24px;
+      font-size: 1.02rem;
+    }
+    .btn-cta:hover { background: var(--cta-hover); }
+    .btn-ghost {
+      background: transparent;
+      color: var(--brand);
+      box-shadow: inset 0 0 0 2px rgba(0, 76, 63, 0.18);
+      min-height: 54px;
+    }
+    .btn-ghost:hover { box-shadow: inset 0 0 0 2px var(--brand); }
+    .btn-light {
+      background: #fff;
+      color: var(--brand);
+      white-space: nowrap;
+    }
+    .btn-light:hover { background: var(--accent-soft); }
+
+    /* ---------- Header ---------- */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(0, 76, 63, 0.96);
+      backdrop-filter: saturate(1.4) blur(12px);
+      -webkit-backdrop-filter: saturate(1.4) blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: env(safe-area-inset-top, 0px);
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      min-height: var(--header-h);
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      min-width: 0;
+    }
+    .brand-logo {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      flex-shrink: 0;
+      background: #fff;
+    }
+    .brand-name {
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: 1.2rem;
+      letter-spacing: -0.01em;
+      color: #fff;
+      line-height: 1.1;
+      white-space: nowrap;
+    }
+    .brand-name span { color: var(--accent); }
+    .nav {
+      display: none;
+      gap: 28px;
+      margin-left: auto;
+      margin-right: 8px;
+    }
+    .nav a {
+      color: rgba(255, 255, 255, 0.82);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.92rem;
+    }
+    .nav a:hover { color: #fff; }
+    .header-cta { min-height: 42px; padding: 9px 16px; font-size: 0.88rem; }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 40px 0 56px;
+      background:
+        radial-gradient(700px 360px at 95% 0%, rgba(245, 166, 35, 0.20), transparent 65%),
+        radial-gradient(600px 400px at -10% 100%, rgba(0, 76, 63, 0.10), transparent 60%),
+        var(--cream);
+    }
+    .hero-grid {
+      display: grid;
+      gap: 40px;
+      align-items: center;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      color: var(--brand);
+      font-weight: 700;
+      font-size: 0.8rem;
+      padding: 6px 12px 6px 8px;
+      border-radius: 999px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 18px;
+    }
+    .eyebrow .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #16A34A;
+      box-shadow: 0 0 0 4px rgba(22, 163, 74, 0.18);
+      margin-left: 4px;
+    }
+    .hero h1 {
+      font-family: var(--serif);
+      font-weight: 700;
+      margin: 0 0 16px;
+      font-size: clamp(2.1rem, 7vw, 3.6rem);
+      line-height: 1.06;
+      letter-spacing: -0.02em;
+      color: var(--brand-dark);
+      max-width: 15ch;
+    }
+    .hero h1 em {
+      font-style: normal;
+      color: var(--cta);
+      background: linear-gradient(transparent 68%, rgba(245, 166, 35, 0.35) 68%);
+      padding: 0 2px;
+    }
+    .lede {
+      margin: 0 0 26px;
+      color: var(--muted);
+      font-size: 1.1rem;
+      max-width: 44ch;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .next-slot {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 20px 0 0;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+    .next-slot svg { width: 18px; height: 18px; color: var(--cta); flex-shrink: 0; }
+    .next-slot strong { color: var(--text); }
+
+    .facts {
+      list-style: none;
+      padding: 0;
+      margin: 28px 0 0;
+      display: grid;
+      gap: 10px;
+    }
+    .facts li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+      box-shadow: var(--shadow-sm);
+    }
+    .fact-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: var(--brand-soft);
+      color: var(--brand);
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+    }
+    .fact-icon svg { width: 20px; height: 20px; }
+    .facts small { display: block; color: var(--muted); font-size: 0.78rem; line-height: 1.3; }
+    .facts strong { display: block; font-size: 0.95rem; line-height: 1.3; }
+
+    .hero-visual { position: relative; }
+    .hero-visual::before {
+      content: "";
+      position: absolute;
+      inset: 24px -12px -16px 24px;
+      border-radius: 28px;
+      background: var(--brand);
+      transform: rotate(3deg);
+    }
+    .hero-visual picture img {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+    }
+    .float-card {
+      position: absolute;
+      left: -8px;
+      bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--paper);
+      border-radius: 16px;
+      padding: 12px 16px 12px 12px;
+      box-shadow: var(--shadow);
+      max-width: 260px;
+    }
+    .float-card .fact-icon { background: var(--accent-soft); color: var(--cta); }
+    .float-card strong { display: block; font-size: 0.92rem; line-height: 1.25; }
+    .float-card small { display: block; color: var(--muted); font-size: 0.78rem; line-height: 1.3; }
+
+    /* ---------- Sections ---------- */
+    section { padding: 64px 0; }
+    .band-white { background: var(--paper); }
+    .section-head { max-width: 640px; margin-bottom: 36px; }
+    .section-head.center { margin-inline: auto; text-align: center; }
+    .kicker {
+      color: var(--cta);
+      font-weight: 800;
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin: 0 0 10px;
+    }
+    .section-title {
+      font-family: var(--serif);
+      font-weight: 700;
+      margin: 0 0 10px;
+      font-size: clamp(1.7rem, 4.5vw, 2.5rem);
+      letter-spacing: -0.015em;
+      line-height: 1.15;
+      color: var(--brand-dark);
+    }
+    .section-sub { margin: 0; color: var(--muted); font-size: 1.02rem; }
+
+    .grid { display: grid; gap: 18px; }
+
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 26px;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 1.12rem;
+      letter-spacing: -0.01em;
+      line-height: 1.3;
+    }
+    .card p { margin: 0; color: var(--muted); }
+
+    /* Steps */
+    .steps { counter-reset: step; }
+    .step { position: relative; background: var(--cream); border-color: transparent; box-shadow: none; }
+    .step-num {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      background: var(--brand);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin-bottom: 16px;
+    }
+    .step:nth-child(2) .step-num { background: var(--cta); }
+    .step:nth-child(3) .step-num { background: var(--accent); color: var(--brand-dark); }
+
+    /* Range */
+    .range-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+    .range-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 18px;
+      color: var(--brand);
+      background: var(--brand-soft);
+    }
+    .range-icon svg { width: 28px; height: 28px; }
+    .range-card:nth-child(2) .range-icon { background: #FDE8E1; color: #B42318; }
+    .range-card:nth-child(3) .range-icon { background: #E6F4DD; color: #3F7D20; }
+    .range-card:nth-child(4) .range-icon { background: var(--accent-soft); color: var(--cta); }
+    .range-note {
+      margin: 28px 0 0;
+      text-align: center;
+      color: var(--muted);
+    }
+    .range-note a { color: var(--brand); font-weight: 700; }
+
+    /* Delivery */
+    .rules {
+      list-style: none;
+      margin: 0 0 28px;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .rules li {
+      background: var(--brand-soft);
+      color: var(--brand-dark);
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    .rules strong { font-weight: 800; }
+    .delivery-grid { display: grid; gap: 24px; align-items: start; }
+    .delivery-photo img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .delivery-side { display: grid; gap: 18px; }
+
+    .checker {
+      background: var(--brand);
+      color: #fff;
+      border-radius: var(--radius);
+      padding: 24px;
+    }
+    .checker h3 { margin: 0 0 4px; font-size: 1.12rem; }
+    .checker p { margin: 0 0 16px; color: rgba(255, 255, 255, 0.78); font-size: 0.92rem; }
+    .checker form { display: flex; gap: 10px; flex-wrap: wrap; }
+    .checker input {
+      flex: 1 1 160px;
+      min-height: 50px;
+      border-radius: 12px;
+      border: 2px solid transparent;
+      padding: 0 16px;
+      font: inherit;
+      font-weight: 700;
+      font-size: 1rem;
+      text-transform: uppercase;
+      color: var(--text);
+      background: #fff;
+    }
+    .checker input::placeholder { text-transform: none; font-weight: 500; color: #8A9792; }
+    .checker input:focus { outline: none; border-color: var(--accent); }
+    .checker button { min-height: 50px; border-radius: 12px; background: var(--accent); color: var(--brand-dark); }
+    .checker button:hover { background: #FFC15A; }
+    .checker-result {
+      margin-top: 14px;
+      border-radius: 12px;
+      padding: 12px 14px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      background: rgba(255, 255, 255, 0.1);
+    }
+    .checker-result a { color: var(--accent); }
+
+    .zone-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 6px;
+    }
+    .zone-head h3 { margin: 0; }
+    .zone-head small { display: block; color: var(--muted); font-weight: 500; font-size: 0.85rem; }
+    .price {
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: 1.6rem;
+      color: var(--brand);
+      line-height: 1;
+      text-align: right;
+      white-space: nowrap;
+    }
+    .price small {
+      display: block;
+      font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+    .zone-card p { font-size: 0.92rem; }
+    .postcodes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 14px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+    .postcodes li {
+      background: var(--cream);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 3px 9px;
+      font-weight: 700;
+      font-size: 0.84rem;
+      font-variant-numeric: tabular-nums;
+    }
+    .zone-card.is-match { border-color: var(--brand); box-shadow: 0 0 0 3px rgba(0, 76, 63, 0.15); }
+
+    /* FAQ */
+    .faq-list { display: grid; gap: 12px; max-width: 780px; margin-inline: auto; }
+    .faq-list details {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow-sm);
+    }
+    .faq-list summary {
+      list-style: none;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 1.02rem;
+      padding: 18px 56px 18px 20px;
+      position: relative;
+    }
+    .faq-list summary::-webkit-details-marker { display: none; }
+    .faq-list summary::after {
+      content: "";
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      width: 24px;
+      height: 24px;
+      margin-top: -12px;
+      border-radius: 50%;
+      background:
+        linear-gradient(var(--brand), var(--brand)) center / 10px 2px no-repeat,
+        linear-gradient(var(--brand), var(--brand)) center / 2px 10px no-repeat,
+        var(--brand-soft);
+      transition: transform 0.2s ease;
+    }
+    .faq-list details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-list details > div { padding: 0 20px 18px; color: var(--muted); }
+
+    /* CTA band */
+    .cta-band {
+      background:
+        radial-gradient(500px 240px at 100% 0%, rgba(245, 166, 35, 0.25), transparent 70%),
+        var(--brand);
+      color: #fff;
+      text-align: center;
+      padding: 64px 0;
+    }
+    .cta-band h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.7rem, 4.5vw, 2.4rem);
+      margin: 0 0 10px;
+      line-height: 1.15;
+    }
+    .cta-band p { margin: 0 auto 26px; color: rgba(255, 255, 255, 0.8); max-width: 46ch; }
+    .cta-band .btn-cta { background: var(--accent); color: var(--brand-dark); box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2); }
+    .cta-band .btn-cta:hover { background: #FFC15A; }
+
+    /* Footer */
+    .site-footer {
+      background: var(--brand-dark);
+      color: rgba(255, 255, 255, 0.75);
+      padding: 40px 0 calc(40px + env(safe-area-inset-bottom, 0px));
+      font-size: 0.92rem;
+    }
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px 32px;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .site-footer p { margin: 0; }
+    .site-footer a { color: #fff; font-weight: 700; text-decoration: none; }
+    .site-footer a:hover { text-decoration: underline; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+
+    /* Floating WhatsApp (mobile) */
+    .fab {
+      position: fixed;
+      right: 16px;
+      bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+      z-index: 60;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #25D366;
+      color: #fff;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
+      transform: translateY(120px);
+      transition: transform 0.25s ease;
+    }
+    .fab svg { width: 30px; height: 30px; }
+    .fab.is-visible { transform: none; }
+
+    /* ---------- Breakpoints ---------- */
+    @media (max-width: 379px) {
+      .brand-name { font-size: 1.02rem; }
+    }
+    @media (max-width: 539px) {
+      .header-cta .label-long { display: none; }
+      .hero-actions .btn { flex: 1 1 100%; }
+    }
+    @media (min-width: 540px) {
+      .header-cta .label-short { display: none; }
+      .facts { grid-template-columns: repeat(3, 1fr); }
+      .facts li { flex-direction: column; align-items: flex-start; gap: 10px; }
+    }
+    @media (min-width: 640px) {
+      .grid-2, .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 900px) {
+      section { padding: 88px 0; }
+      .hero { padding: 72px 0 88px; }
+      .hero-grid { grid-template-columns: 1.1fr 0.9fr; gap: 64px; }
+      .float-card { left: -36px; }
+      .grid-3 { grid-template-columns: repeat(3, 1fr); }
+      .grid-4 { grid-template-columns: repeat(4, 1fr); }
+      .delivery-grid { grid-template-columns: 0.8fr 1.2fr; gap: 32px; }
+      .delivery-photo { position: sticky; top: calc(var(--header-h) + 24px); }
+      .nav { display: flex; }
+      .fab { display: none; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- Reusable WhatsApp icon -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2Zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.24-8.24 8.24Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></symbol>
+  </svg>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top" aria-label="PantryDak Groceries — back to top">
+        <img class="brand-logo" src="assets/img/logo-112.jpg" width="42" height="42" alt="">
+        <span class="brand-name">Pantry<span>Dak</span></span>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="#how-it-works">How it works</a>
+        <a href="#range">Our range</a>
+        <a href="#delivery">Delivery</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a class="btn btn-light header-cta js-wa" href="https://wa.me/447501265010">
+        <svg aria-hidden="true"><use href="#i-wa"/></svg>
+        <span class="label-long">Order on WhatsApp</span><span class="label-short">Order</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow"><span class="dot" aria-hidden="true"></span>Now delivering · Liverpool pilot</span>
+          <h1>Authentic Indian groceries, <em>delivered</em> across Liverpool.</h1>
+          <p class="lede">Rice, atta, dal, spices, fresh essentials and snacks — straight to your doorstep every weekend. Just send your list on WhatsApp.</p>
+          <div class="hero-actions" id="hero-cta">
+            <a class="btn btn-cta js-wa" href="https://wa.me/447501265010">
+              <svg aria-hidden="true"><use href="#i-wa"/></svg>
+              Start your order on WhatsApp
+            </a>
+            <a class="btn btn-ghost" href="#delivery">Check my postcode</a>
+          </div>
+          <p class="next-slot">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            <span id="next-slot-text">Order by <strong>Friday 8 PM</strong> for this weekend's delivery.</span>
+          </p>
+
+          <ul class="facts" aria-label="Key order information">
+            <li>
+              <span class="fact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h12M6 22h12M7 2v4a5 5 0 0 0 10 0V2M7 22v-4a5 5 0 0 1 10 0v4"/></svg></span>
+              <span><small>Order cutoff</small><strong>Fridays 8 PM</strong></span>
+            </li>
+            <li>
+              <span class="fact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></span>
+              <span><small>Delivery days</small><strong>Saturday &amp; Sunday</strong></span>
+            </li>
+            <li>
+              <span class="fact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.4-7-10a7 7 0 1 1 14 0c0 5.6-7 10-7 10Z"/><circle cx="12" cy="11" r="2.5"/></svg></span>
+              <span><small>Coverage</small><strong>22 Liverpool postcodes</strong></span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="hero-visual">
+          <picture>
+            <source srcset="assets/img/hero-spices.webp" type="image/webp">
+            <img src="assets/img/hero-spices.jpg" width="900" height="1200" alt="Spoons of cumin, mustard seeds, chilli powder, turmeric and coriander seeds on a wooden table" fetchpriority="high">
+          </picture>
+          <div class="float-card">
+            <span class="fact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c0-8 6-14 15-14 0 9-6 15-14 15"/><path d="M5 19l8-8"/></svg></span>
+            <span><strong>Fresh weekly batch</strong><small>Packed for your weekend delivery</small></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="band-white" id="how-it-works" aria-labelledby="how-title">
+      <div class="wrap">
+        <div class="section-head center">
+          <p class="kicker">Simple process</p>
+          <h2 class="section-title" id="how-title">How it works</h2>
+          <p class="section-sub">Three steps from pantry list to weekend delivery — built around a weekly batch so produce stays fresh.</p>
+        </div>
+        <div class="grid grid-3 steps">
+          <article class="card step">
+            <div class="step-num" aria-hidden="true">1</div>
+            <h3>Send your list</h3>
+            <p>Message us on WhatsApp with what you need, or ask for this week's product list.</p>
+          </article>
+          <article class="card step">
+            <div class="step-num" aria-hidden="true">2</div>
+            <h3>Order by Friday 8 PM</h3>
+            <p>We confirm your basket and total, and lock in your weekend slot.</p>
+          </article>
+          <article class="card step">
+            <div class="step-num" aria-hidden="true">3</div>
+            <h3>Weekend doorstep delivery</h3>
+            <p>We send your time window after the Friday cutoff, then deliver fresh to your Liverpool home.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Range -->
+    <section id="range" aria-labelledby="range-title">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="kicker">Weekly range</p>
+          <h2 class="section-title" id="range-title">Everyday Indian kitchen staples</h2>
+          <p class="section-sub">Our most popular categories for the Liverpool pilot.</p>
+        </div>
+        <div class="grid grid-4">
+          <article class="card range-card">
+            <div class="range-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18a9 9 0 0 1-18 0Z"/><path d="M8 7.5c0-1 1-1.5 1-2.5M12 7.5c0-1 1-1.5 1-2.5M16 7.5c0-1 1-1.5 1-2.5"/></svg>
+            </div>
+            <h3>Rice, Atta &amp; Flours</h3>
+            <p>Basmati, sona masoori, atta and everyday cooking flours.</p>
+          </article>
+          <article class="card range-card">
+            <div class="range-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3h8v4H8z"/><path d="M7 7h10v12a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2Z"/><path d="M7 12h10"/></svg>
+            </div>
+            <h3>Dal, Spices &amp; Masalas</h3>
+            <p>Lentils, whole spices and blended masalas for home cooking.</p>
+          </article>
+          <article class="card range-card">
+            <div class="range-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c0-8 6-14 15-14 0 9-6 15-14 15"/><path d="M5 19l8-8"/></svg>
+            </div>
+            <h3>Fresh Essentials</h3>
+            <p>Curry leaves, ginger, garlic and other weekly produce picks.</p>
+          </article>
+          <article class="card range-card">
+            <div class="range-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M3.3 7l17.4 10M3.3 17l17.4-10"/><path d="M9.5 3.5 12 6l2.5-2.5M9.5 20.5 12 18l2.5 2.5"/></svg>
+            </div>
+            <h3>Snacks, Sweets &amp; Frozen Favourites</h3>
+            <p>Namkeen, mithai and freezer staples for the weekend table.</p>
+          </article>
+        </div>
+        <p class="range-note">Looking for something specific? <a class="js-wa" href="https://wa.me/447501265010">Ask us on WhatsApp</a> for this week's full list.</p>
+      </div>
+    </section>
+
+    <!-- Delivery -->
+    <section class="band-white" id="delivery" aria-labelledby="zones-title">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="kicker">No surprises</p>
+          <h2 class="section-title" id="zones-title">Delivery zones &amp; fees</h2>
+          <p class="section-sub">Clear two-tier pricing for the Liverpool pilot. Check your postcode before you send your basket.</p>
+        </div>
+
+        <ul class="rules" aria-label="Order rules">
+          <li>Minimum order <strong>£20</strong></li>
+          <li>Free delivery over <strong>£35</strong></li>
+          <li>Order by <strong>Fri 8 PM</strong></li>
+          <li>Delivered <strong>Sat &amp; Sun</strong></li>
+        </ul>
+
+        <div class="delivery-grid">
+          <div class="delivery-photo">
+            <picture>
+              <source srcset="assets/img/doorstep.webp" type="image/webp">
+              <img src="assets/img/doorstep.jpg" width="960" height="1200" alt="A bag of groceries left on a doorstep" loading="lazy" decoding="async">
+            </picture>
+          </div>
+
+          <div class="delivery-side">
+            <div class="checker">
+              <h3>Do we deliver to you?</h3>
+              <p>Enter your postcode, e.g. L15 or L15 3AB.</p>
+              <form id="pc-form" novalidate>
+                <label for="pc-input" class="sr-only">Your postcode</label>
+                <input id="pc-input" name="postcode" type="text" inputmode="text" autocomplete="postal-code" placeholder="Your postcode" maxlength="9">
+                <button class="btn" type="submit">Check</button>
+              </form>
+              <div class="checker-result" id="pc-result" role="status" aria-live="polite" hidden></div>
+            </div>
+
+            <article class="card zone-card" id="zone-standard">
+              <div class="zone-head">
+                <h3>Standard Zone<small>Core Liverpool</small></h3>
+                <div class="price">£2.99<small>per delivery</small></div>
+              </div>
+              <p>Free delivery on orders over £35.</p>
+              <ul class="postcodes" aria-label="Standard zone postcodes">
+                <li>L1</li><li>L2</li><li>L3</li><li>L4</li><li>L5</li>
+                <li>L6</li><li>L7</li><li>L8</li><li>L13</li><li>L15</li>
+              </ul>
+            </article>
+
+            <article class="card zone-card" id="zone-extended">
+              <div class="zone-head">
+                <h3>Extended Zone<small>More than 5 km from the city centre</small></h3>
+                <div class="price">£4.99<small>£2.99 + £2.00 distance fee</small></div>
+              </div>
+              <p>Standard rate plus a £2.00 distance fee. Over £35, the standard rate is free — you just pay the £2.00 distance fee.</p>
+              <ul class="postcodes" aria-label="Extended zone postcodes">
+                <li>L9</li><li>L10</li><li>L11</li><li>L12</li><li>L14</li>
+                <li>L16</li><li>L17</li><li>L18</li><li>L19</li><li>L20</li>
+                <li>L25</li><li>L28</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" aria-labelledby="faq-title">
+      <div class="wrap">
+        <div class="section-head center">
+          <p class="kicker">Pilot FAQs</p>
+          <h2 class="section-title" id="faq-title">Questions, answered</h2>
+          <p class="section-sub">Ordering, payment, minimums and delivery for the Liverpool launch.</p>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>How do I place an order?</summary>
+            <div>Send your shopping list to us on WhatsApp at <strong>+44 7501 265010</strong> before Friday 8 PM. We'll confirm availability and your total.</div>
+          </details>
+          <details>
+            <summary>How do I pay?</summary>
+            <div>We accept instant UK Bank Transfer (Faster Payments) and card payments via a secure link.</div>
+          </details>
+          <details>
+            <summary>Is there a minimum order?</summary>
+            <div>The minimum order for weekend delivery is £20. Orders over £35 get free standard delivery (Extended Zone orders still pay the £2.00 distance fee).</div>
+          </details>
+          <details>
+            <summary>When do I receive my delivery?</summary>
+            <div>Deliveries take place every Saturday and Sunday. You'll receive your delivery time window by WhatsApp after the Friday 8 PM cutoff.</div>
+          </details>
+          <details>
+            <summary>Which areas do you cover?</summary>
+            <div>Standard Zone: L1–L8, L13 and L15. Extended Zone: L9–L12, L14, L16–L20, L25 and L28. Use the <a href="#delivery">postcode checker</a> to confirm.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA band -->
+    <section class="cta-band" aria-labelledby="cta-title">
+      <div class="wrap">
+        <h2 id="cta-title">Ready for this weekend's shop?</h2>
+        <p>Send us your list on WhatsApp — we'll handle the rest and deliver to your door.</p>
+        <a class="btn btn-cta js-wa" href="https://wa.me/447501265010">
+          <svg aria-hidden="true"><use href="#i-wa"/></svg>
+          Message us on WhatsApp
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>© <span id="year">2026</span> PantryDak Groceries · Liverpool, UK</p>
+      <p class="footer-links">
+        <a href="mailto:orders@pantrydak.co.uk">orders@pantrydak.co.uk</a>
+        <a class="js-wa" href="https://wa.me/447501265010">WhatsApp +44 7501 265010</a>
+      </p>
+    </div>
+  </footer>
+
+  <a class="fab js-wa" id="fab" href="https://wa.me/447501265010" aria-label="Order on WhatsApp">
+    <svg aria-hidden="true"><use href="#i-wa"/></svg>
+  </a>
+
+  <script>
+    (function () {
+      var WA_NUMBER = "447501265010";
+      var WA_TEXT = "Hi PantryDak! I would like to place an order for this weekend.";
+
+      function waLink(text) {
+        return "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(text || WA_TEXT);
+      }
+      document.querySelectorAll(".js-wa").forEach(function (a) { a.href = waLink(); });
+
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Next order cutoff (Friday 8 PM) and delivery weekend
+      try {
+        var now = new Date();
+        var cutoff = new Date(now);
+        cutoff.setDate(now.getDate() + ((5 - now.getDay() + 7) % 7));
+        cutoff.setHours(20, 0, 0, 0);
+        if (cutoff <= now) cutoff.setDate(cutoff.getDate() + 7);
+        var sat = new Date(cutoff); sat.setDate(cutoff.getDate() + 1);
+        var sun = new Date(cutoff); sun.setDate(cutoff.getDate() + 2);
+        var fmt = function (d, opts) { return d.toLocaleDateString("en-GB", opts); };
+        var dayMonth = { day: "numeric", month: "short" };
+        document.getElementById("next-slot-text").innerHTML =
+          "Order by <strong>" + fmt(cutoff, { weekday: "short", day: "numeric", month: "short" }) +
+          ", 8 PM</strong> for delivery <strong>Sat " + fmt(sat, { day: "numeric" }) +
+          " – Sun " + fmt(sun, dayMonth) + "</strong>.";
+      } catch (e) { /* keep static fallback text */ }
+
+      // Postcode checker
+      var STANDARD = [1, 2, 3, 4, 5, 6, 7, 8, 13, 15];
+      var EXTENDED = [9, 10, 11, 12, 14, 16, 17, 18, 19, 20, 25, 28];
+      var form = document.getElementById("pc-form");
+      var input = document.getElementById("pc-input");
+      var result = document.getElementById("pc-result");
+      var zones = { standard: document.getElementById("zone-standard"), extended: document.getElementById("zone-extended") };
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var raw = input.value.toUpperCase().replace(/\s+/g, "");
+        zones.standard.classList.remove("is-match");
+        zones.extended.classList.remove("is-match");
+        result.hidden = false;
+
+        if (!raw) {
+          result.textContent = "Please enter your postcode.";
+          return;
+        }
+        // Strip the inward code (e.g. "3AB") if a full postcode was entered
+        var outward = raw.length >= 5 && /\d[A-Z]{2}$/.test(raw) ? raw.slice(0, -3) : raw;
+        var m = outward.match(/^L(\d{1,2})$/);
+        var district = m ? parseInt(m[1], 10) : null;
+
+        if (district !== null && STANDARD.indexOf(district) !== -1) {
+          result.innerHTML = "✅ Great news — <strong>" + outward + "</strong> is in our Standard Zone. Delivery is £2.99, free over £35.";
+          zones.standard.classList.add("is-match");
+        } else if (district !== null && EXTENDED.indexOf(district) !== -1) {
+          result.innerHTML = "✅ We deliver to <strong>" + outward + "</strong> — it's in our Extended Zone. Delivery is £4.99, or just £2.00 on orders over £35.";
+          zones.extended.classList.add("is-match");
+        } else {
+          var safe = outward.replace(/[^A-Z0-9]/g, "");
+          result.innerHTML = "😔 Sorry, we don't deliver to <strong>" + (safe || "that postcode") + "</strong> yet during the pilot. " +
+            '<a href="' + waLink("Hi PantryDak! Do you plan to deliver to " + safe + "?") + '">Message us</a> to register your interest.';
+        }
+      });
+
+      // Floating WhatsApp button appears once the hero CTA scrolls out of view
+      var fab = document.getElementById("fab");
+      var heroCta = document.getElementById("hero-cta");
+      if ("IntersectionObserver" in window && heroCta) {
+        new IntersectionObserver(function (entries) {
+          fab.classList.toggle("is-visible", !entries[0].isIntersecting);
+        }).observe(heroCta);
+      } else {
+        fab.classList.add("is-visible");
+      }
+    })();
+  </script>
+</body>
+</html>

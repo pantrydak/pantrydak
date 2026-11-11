@@ -1,0 +1,5 @@
+.DS_Store
+# Full-size source images (not deployed)
+assets/originals/
+# Private notes (not deployed)
+TODO.md
